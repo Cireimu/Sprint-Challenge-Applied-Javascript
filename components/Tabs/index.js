@@ -10,8 +10,7 @@
 
 const tabs = document.querySelector(".topics");
 
-axios
-  .get("https://lambda-times-backend.herokuapp.com/topics")
+axios.get("https://lambda-times-backend.herokuapp.com/topics")
   .then(response => {
     response.data.topics.forEach(singleTopic => {
       tabs.appendChild(divTabs(singleTopic))
